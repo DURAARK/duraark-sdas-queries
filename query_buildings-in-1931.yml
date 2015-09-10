@@ -1,0 +1,10 @@
+label:
+  Buildings completed in 1931
+description:
+  Retrieve all information on buildings completed in the year 1931.
+  The query uses metadata from an semantic enrichement containing the YAGO
+  categories.
+sparql:
+  select ?buildingName ?type ?value where {
+  ?buildingName ?type ?value.
+  FILTER regex(?value,"CompletedIn1931")}
