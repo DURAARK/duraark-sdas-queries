@@ -20,5 +20,9 @@ Before adding a file to the repository please test the query at
 
 which provides a SPARQL endpoint to the DURAARK SDAS knowledge graph.
 
+## Demo
+
+A public demo of the [DURAARK System](http://github.com/duraark/duraark-system) which incorporates the queries in this repository is available [here](http://workbench.duraark.eu).
+
 
 
