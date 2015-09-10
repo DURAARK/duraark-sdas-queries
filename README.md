@@ -16,9 +16,7 @@ where 'sparql' contains the actual SPARQL query for the SDAS. 'label' and 'descr
 
 Before adding a file to the repository please test the query at
 
-```
-http://data.duraark.eu/sparql
-```
+[http://data.duraark.eu/sparql](http://data.duraark.eu/sparql)
 
 which provides a SPARQL endpoint to the DURAARK SDAS knowledge graph.
 
