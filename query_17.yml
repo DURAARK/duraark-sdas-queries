@@ -1,0 +1,10 @@
+label:
+  Give me a list of buildings all over the world which where completed in 1931.
+category:
+  contextual
+sparql: >
+  SELECT ?buildingName ?type ?value FROM <http://data.duraark.eu/crawl/4> WHERE {
+    ?buildingName ?type ?value.
+    FILTER regex(?value,"CompletedIn1931").
+  }
+  LIMIT 40

@@ -1,0 +1,11 @@
+label:
+  Give me a list of famous buildings and structures in Denmark.
+category:
+  contextual
+sparql: >
+  SELECT ?building FROM <http://data.duraark.eu/crawl/44>
+  WHERE {
+    ?building ?type ?value.
+    FILTER(regex(?value,"Denmark", 'i') &&
+    !regex(?building, "Category", 'i'))
+  }

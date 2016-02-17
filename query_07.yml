@@ -1,0 +1,12 @@
+label:
+  Show me other buildings of the same architect all over the world.
+category:
+  buildm
+variables:
+  - architect
+sparql: >
+  SELECT ?building ?architect  FROM <http://data.duraark.eu/sdas>
+  WHERE {
+    ?building <http://data.duraark.eu/vocab/buildm/architect> ?architect
+    .FILTER (regex(str(?architect), {{architect}}))
+  }

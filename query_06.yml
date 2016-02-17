@@ -1,0 +1,12 @@
+label:
+  Show me buildings of same age in Copenhagen.
+category:
+  buildm
+sparql: >
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+  SELECT ?building1, ?building2  FROM  <http://data.duraark.eu/sdas>
+  WHERE {
+    ?building1 <http://data.duraark.eu/vocab/buildm/completionDate> ?year1.
+    ?building2 <http://data.duraark.eu/vocab/buildm/completionDate> ?year2
+    .FILTER (xsd:integer(?year1)=xsd:integer(?year2) && ?building1!=?building2)
+  }

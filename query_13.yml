@@ -1,0 +1,16 @@
+label:
+  Retrieve the population of the location which has the most number of buildings in the SDAS.
+category:
+  contextual
+sparql: >
+  SELECT ?loc, ?population FROM <http://data.duraark.eu/cph>
+  WHERE {
+    ?loc <http://dbpedia.org/property/populationTotal> ?population.
+    FILTER (regex(?loc, ?location, 'i')).
+    {
+      SELECT ?location FROM <http://data.duraark.eu/sdas>
+      WHERE {
+        ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location
+      } GROUP BY (?location) ORDER BY DESC(count(?location) as ?total) LIMIT 1
+    }
+  }

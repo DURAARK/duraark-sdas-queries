@@ -1,0 +1,14 @@
+label:
+  Give me a list of buildings in the SDAS which have X floors and in a given location.
+category:
+  buildm
+variables:
+  - floorCount
+  - postalLocality
+sparql: >
+  SELECT ?building, ?numFloors FROM <http://data.duraark.eu/sdas>
+  WHERE {
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors.
+    ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location.
+    FILTER(?numFloors>={{floorCount}} && regex(str(?location), {{postalLocality}}))
+  } ORDER BY DESC(?numFloors)

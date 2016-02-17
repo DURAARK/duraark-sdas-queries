@@ -1,0 +1,11 @@
+label:
+  Give me a list of buildings in the SDAS which have both ‘models’ and ‘plans’ in the archive.
+category:
+  buildm
+sparql: >
+  SELECT ?building FROM <http://data.duraark.eu/sdas>
+    WHERE{
+    ?building <http://data.duraark.eu/vocab/buildm/hasType> ?value.
+    ?building2 <http://data.duraark.eu/vocab/buildm/hasType> ?value2.
+    FILTER (regex(?value, "Model",'i') && regex(?value2,"Plan",'i') && ?building=?building2)
+  }

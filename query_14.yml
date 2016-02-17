@@ -1,0 +1,12 @@
+label:
+  Give me a list of famous people who studied or worked at the DTU.
+category:
+  contextual
+sparql: >
+  SELECT DISTINCT ?person FROM <http://data.duraark.eu/crawl/40>
+  WHERE {
+    {?person <http://dbpedia.org/property/workInstitution> <http://dbpedia.org/resource/Technical_University_of_Denmark>}
+    UNION {?person <http://dbpedia.org/property/almaMater> <http://dbpedia.org/resource/Technical_University_of_Denmark>}
+    UNION {?person <http://dbpedia.org/property/workplaces> <http://dbpedia.org/resource/Technical_University_of_Denmark>}
+    UNION {?person <http://dbpedia.org/ontology/education> <http://dbpedia.org/resource/Technical_University_of_Denmark>} .?person ?type ?value
+  }

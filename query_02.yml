@@ -1,0 +1,12 @@
+label:
+  Give me a list of buildings with their numbers of floors in Copenhagen.
+category:
+  buildm
+variables:
+sparql: >
+  SELECT DISTINCT ?building ?floors FROM <http://data.duraark.eu/sdas>
+  WHERE {
+    ?building <http://data.duraark.eu/vocab/buildm/postalLocality> "Copenhagen".
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?floors.
+    ?building ?p ?floors
+  }

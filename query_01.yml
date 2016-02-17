@@ -1,0 +1,15 @@
+label:
+  Give me a list of buildings in the SDAS which have a least X floors, from the given architect in a given location.
+category:
+  buildm
+variables:
+  - floorCount
+  - postalLocality
+  - architect
+sparql: |
+  SELECT ?building FROM  <http://data.duraark.eu/sdas>
+  WHERE {?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors.
+  ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location.
+  ?building <http://data.duraark.eu/vocab/buildm/architect> ?architect.
+  FILTER(?numFloors>={{floorCount}} && regex(str(?location), {{postalLocality}}) && regex(str(?architect), {{architect}}))}
+  ORDER BY DESC(?numFloors)
