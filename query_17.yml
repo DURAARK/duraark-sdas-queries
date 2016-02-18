@@ -3,7 +3,7 @@ label:
 category:
   contextual
 sparql: >
-  SELECT ?buildingName ?type ?value FROM <http://data.duraark.eu/crawl/4> WHERE {
+  SELECT ?buildingName FROM <http://data.duraark.eu/crawl/4> WHERE {
     ?buildingName ?type ?value.
     FILTER regex(?value,"CompletedIn1931").
   }
