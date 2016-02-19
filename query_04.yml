@@ -1,7 +1,7 @@
 label:
   Give me a list of buildings in the SDAS which have X floors and in given location.
 description: |
-    For instance try this: Number of Floors = "2" | Location = "Kgs. Lyngby By, Lundtofte"
+    For instance: Number of Floors = "2" | Location = "Kgs. Lyngby By, Lundtofte"
 category:
   buildm
 variables:

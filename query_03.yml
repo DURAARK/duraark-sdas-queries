@@ -1,7 +1,7 @@
 label:
   Give me a list of buildings in the SDAS which have X floors and Y windows.
 description: |
-    For instance try this: Number of Floors = "6" | Number of Windows = "58"
+    For instance: Number of Floors = "6" | Number of Windows = "58"
 category:
   buildm
 variables:

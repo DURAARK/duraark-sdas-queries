@@ -1,7 +1,7 @@
 label:
   Give me a list of buildings in the SDAS which have a least X floors from the given architect in a given location.
 description: |
-  For instance try this: Number of Floors = "1" | Location = "Copenhagen" | Architect = "ZESO"
+  For instance: Number of Floors = "1" | Location = "Copenhagen" | Architect = "ZESO"
 category:
   buildm
 variables:
