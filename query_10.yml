@@ -2,6 +2,8 @@ label:
   Show me buildings all over the world with the same number of floors.
 category:
   buildm
+show:
+  false
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT DISTINCT ?building FROM <http://data.duraark.eu/sdas>
@@ -9,4 +11,4 @@ sparql: >
     ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors.
     ?building2 <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors2.
     FILTER(xsd:integer(?numFloors)=xsd:integer(?numFloors2) && ?building!=?building2)
-  } 
+  }

@@ -4,9 +4,9 @@ category:
   buildm
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-  SELECT DISTINCT ?building FROM <http://data.duraark.eu/sdas>
+  SELECT DISTINCT ?building ?windows FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/windowCount> ?numWindows .
+    ?building <http://data.duraark.eu/vocab/buildm/windowCount> ?windows .
     ?building2 <http://data.duraark.eu/vocab/buildm/windowCount> ?numWindows2 .
-    FILTER(xsd:integer(?numWindows)=xsd:integer(?numWindows2) && ?building!=?building2)
+    FILTER(xsd:integer(?windows)=xsd:integer(?numWindows2) && ?building!=?building2)
   }

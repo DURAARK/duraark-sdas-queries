@@ -2,6 +2,8 @@ label:
   Give me a list of buildings in the SDAS which have both ‘models’ and ‘plans’ in the archive.
 category:
   buildm
+show:
+  false
 sparql: >
   SELECT ?building FROM <http://data.duraark.eu/sdas>
     WHERE{

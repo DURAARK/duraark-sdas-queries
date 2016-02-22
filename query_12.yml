@@ -2,6 +2,8 @@ label:
   Show me buildings all over the world with the same architectural style.
 category:
   buildm
+show:
+  false
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT DISTINCT ?building, ?style FROM <http://data.duraark.eu/sdas>

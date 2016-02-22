@@ -1,5 +1,5 @@
 label:
-  Give me a list of buildings in the SDAS which have X floors and in given location.
+  Give me a list of buildings which have at least X floors in a given location.
 description: |
     For instance: Number of Floors = "2" | Location = "Kgs. Lyngby By, Lundtofte"
 category:
@@ -8,9 +8,9 @@ variables:
   - floorCount
   - postalLocality
 sparql: >
-  SELECT ?building, ?numFloors FROM <http://data.duraark.eu/sdas>
+  SELECT ?building, ?floors FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors .
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?floors .
     ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location .
-    FILTER(xsd:integer(?numFloors)>={{floorCount}} && regex(str(?location), {{postalLocality}}))
-  } ORDER BY DESC(?numFloors)
+    FILTER(xsd:integer(?floors)>={{floorCount}} && regex(str(?location), {{postalLocality}}))
+  } ORDER BY DESC(?floors)

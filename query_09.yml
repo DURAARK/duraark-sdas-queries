@@ -4,10 +4,10 @@ category:
   buildm
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-  SELECT DISTINCT ?building FROM <http://data.duraark.eu/sdas>
+  SELECT DISTINCT ?building ?floors FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors .
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?floors .
     ?building2 <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors2 .
     ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location .
-    FILTER(regex(?location, "Copenhagen") && xsd:integer(?numFloors)=xsd:integer(?numFloors2) && ?building!=?building2)
+    FILTER(regex(?location, "Copenhagen") && xsd:integer(?floors)=xsd:integer(?numFloors2) && ?building!=?building2)
   }

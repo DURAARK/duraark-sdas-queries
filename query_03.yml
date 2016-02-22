@@ -1,5 +1,5 @@
 label:
-  Give me a list of buildings in the SDAS which have X floors and Y windows.
+  Give me a list of buildings in the SDAS which have at least X floors and Y windows.
 description: |
     For instance: Number of Floors = "6" | Number of Windows = "58"
 category:
@@ -8,9 +8,9 @@ variables:
   - floorCount
   - windowCount
 sparql: >
-  SELECT DISTINCT ?building, ?numFloors, ?numWindows FROM <http://data.duraark.eu/sdas>
+  SELECT DISTINCT ?building, ?floors, ?windows FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors .
-    ?building <http://data.duraark.eu/vocab/buildm/windowCount> ?numWindows .
-    FILTER(xsd:integer(?numFloors)>={{floorCount}} && xsd:integer(?numWindows)>={{windowCount}})
-  } ORDER BY DESC(?numFloors)
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?floors .
+    ?building <http://data.duraark.eu/vocab/buildm/windowCount> ?windows .
+    FILTER(xsd:integer(?floors)>={{floorCount}} && xsd:integer(?windows)>={{windowCount}})
+  } ORDER BY DESC(?floors)

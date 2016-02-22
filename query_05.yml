@@ -4,8 +4,9 @@ category:
   buildm
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-  SELECT ?histBuilding, ?year FROM  <http://data.duraark.eu/sdas>
+  SELECT ?building, ?year FROM  <http://data.duraark.eu/sdas>
   WHERE {
-    ?histBuilding <http://data.duraark.eu/vocab/buildm/completionDate> ?year .
+    ?building <http://data.duraark.eu/vocab/buildm/completionDate> ?year .
+    ?building <http://data.duraark.eu/vocab/buildm/postalLocality> "Copenhagen" .
     FILTER (xsd:integer(?year)<1950)
   }

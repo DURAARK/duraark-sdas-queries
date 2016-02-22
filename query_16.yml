@@ -1,10 +1,11 @@
 label:
-  Give me a list of famous churches in Denmark.
+  Give me a list of famous churches all over the world.
 category:
   contextual
+show:
+  false
 sparql: >
   SELECT ?building FROM <http://data.duraark.eu/crawl/3> WHERE{
-    ?building ?type ?value .
     FILTER regex(?value,"Church") .
   }
   LIMIT 40
