@@ -5,7 +5,7 @@ category:
 sparql: >
   SELECT ?building FROM <http://data.duraark.eu/sdas>
     WHERE{
-    ?building <http://data.duraark.eu/vocab/buildm/hasType> ?value.
-    ?building2 <http://data.duraark.eu/vocab/buildm/hasType> ?value2.
+    ?building <http://data.duraark.eu/vocab/buildm/hasType> ?value .
+    ?building2 <http://data.duraark.eu/vocab/buildm/hasType> ?value2 .
     FILTER (regex(?value, "Model",'i') && regex(?value2,"Plan",'i') && ?building=?building2)
   }

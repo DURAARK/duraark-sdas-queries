@@ -6,7 +6,7 @@ variables:
 sparql: >
   SELECT DISTINCT ?building ?floors FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/postalLocality> "Copenhagen".
-    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?floors.
+    ?building <http://data.duraark.eu/vocab/buildm/postalLocality> "Copenhagen" .
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?floors .
     ?building ?p ?floors
   }

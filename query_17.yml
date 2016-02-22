@@ -4,7 +4,7 @@ category:
   contextual
 sparql: >
   SELECT ?buildingName FROM <http://data.duraark.eu/crawl/4> WHERE {
-    ?buildingName ?type ?value.
-    FILTER regex(?value,"CompletedIn1931").
+    ?buildingName ?type ?value .
+    FILTER regex(?value,"CompletedIn1931") .
   }
   LIMIT 40

@@ -9,9 +9,11 @@ variables:
   - postalLocality
   - architect
 sparql: |
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT ?building FROM  <http://data.duraark.eu/sdas>
-  WHERE {?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors.
-  ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location.
-  ?building <http://data.duraark.eu/vocab/buildm/architect> ?architect.
-  FILTER(?numFloors>={{floorCount}} && regex(str(?location), {{postalLocality}}) && regex(str(?architect), {{architect}}))}
-  ORDER BY DESC(?numFloors)
+  WHERE {
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors .
+    ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location .
+    ?building <http://data.duraark.eu/vocab/buildm/architect> ?architect .
+    FILTER(xsd:integer(?numFloors)>={{floorCount}} && regex(str(?location), {{postalLocality}}) && regex(str(?architect), {{architect}}))
+  } ORDER BY DESC(?numFloors)

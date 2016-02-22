@@ -6,6 +6,6 @@ sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT ?histBuilding, ?year FROM  <http://data.duraark.eu/sdas>
   WHERE {
-    ?histBuilding <http://data.duraark.eu/vocab/buildm/completionDate> ?year
-    .FILTER (xsd:integer(?year)<1950)
+    ?histBuilding <http://data.duraark.eu/vocab/buildm/completionDate> ?year .
+    FILTER (xsd:integer(?year)<1950)
   }

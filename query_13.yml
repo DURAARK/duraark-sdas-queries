@@ -5,8 +5,8 @@ category:
 sparql: >
   SELECT ?loc, ?population FROM <http://data.duraark.eu/cph>
   WHERE {
-    ?loc <http://dbpedia.org/property/populationTotal> ?population.
-    FILTER (regex(?loc, ?location, 'i')).
+    ?loc <http://dbpedia.org/property/populationTotal> ?population .
+    FILTER (regex(?loc, ?location, 'i')) .
     {
       SELECT ?location FROM <http://data.duraark.eu/sdas>
       WHERE {

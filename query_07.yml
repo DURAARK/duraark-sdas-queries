@@ -7,6 +7,6 @@ variables:
 sparql: >
   SELECT ?building ?architect  FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/architect> ?architect
-    .FILTER (regex(str(?architect), {{architect}}))
+    ?building <http://data.duraark.eu/vocab/buildm/architect> ?architect .
+    FILTER (regex(str(?architect), {{architect}}))
   }

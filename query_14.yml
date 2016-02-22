@@ -8,5 +8,6 @@ sparql: >
     {?person <http://dbpedia.org/property/workInstitution> <http://dbpedia.org/resource/Technical_University_of_Denmark>}
     UNION {?person <http://dbpedia.org/property/almaMater> <http://dbpedia.org/resource/Technical_University_of_Denmark>}
     UNION {?person <http://dbpedia.org/property/workplaces> <http://dbpedia.org/resource/Technical_University_of_Denmark>}
-    UNION {?person <http://dbpedia.org/ontology/education> <http://dbpedia.org/resource/Technical_University_of_Denmark>} .?person ?type ?value
+    UNION {?person <http://dbpedia.org/ontology/education> <http://dbpedia.org/resource/Technical_University_of_Denmark>} .
+    ?person ?type ?value
   }

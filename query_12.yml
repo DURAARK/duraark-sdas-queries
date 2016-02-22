@@ -6,7 +6,7 @@ sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT DISTINCT ?building, ?style FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/architecturalStyle> ?style.
-    ?building2 <http://data.duraark.eu/vocab/buildm/architecturalStyle> ?style2.
+    ?building <http://data.duraark.eu/vocab/buildm/architecturalStyle> ?style .
+    ?building2 <http://data.duraark.eu/vocab/buildm/architecturalStyle> ?style2 .
     FILTER(?style=?style2 && ?building!=?building2)
   }

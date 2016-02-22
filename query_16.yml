@@ -4,7 +4,7 @@ category:
   contextual
 sparql: >
   SELECT ?building FROM <http://data.duraark.eu/crawl/3> WHERE{
-    ?building ?type ?value.
-    FILTER regex(?value,"Church").
+    ?building ?type ?value .
+    FILTER regex(?value,"Church") .
   }
   LIMIT 40

@@ -10,7 +10,7 @@ variables:
 sparql: >
   SELECT ?building, ?numFloors FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors.
-    ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location.
-    FILTER(?numFloors>={{floorCount}} && regex(str(?location), {{postalLocality}}))
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors .
+    ?building <http://data.duraark.eu/vocab/buildm/postalLocality> ?location .
+    FILTER(xsd:integer(?numFloors)>={{floorCount}} && regex(str(?location), {{postalLocality}}))
   } ORDER BY DESC(?numFloors)

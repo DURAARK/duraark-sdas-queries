@@ -10,7 +10,7 @@ variables:
 sparql: >
   SELECT DISTINCT ?building, ?numFloors, ?numWindows FROM <http://data.duraark.eu/sdas>
   WHERE {
-    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors.
-    ?building <http://data.duraark.eu/vocab/buildm/windowCount> ?numWindows.
-    FILTER(?numFloors>={{floorCount}} && ?numWindows>={{windowCount}})
+    ?building <http://data.duraark.eu/vocab/buildm/floorCount> ?numFloors .
+    ?building <http://data.duraark.eu/vocab/buildm/windowCount> ?numWindows .
+    FILTER(xsd:integer(?numFloors)>={{floorCount}} && xsd:integer(?numWindows)>={{windowCount}})
   } ORDER BY DESC(?numFloors)
