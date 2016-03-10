@@ -4,6 +4,8 @@ category:
   buildm
 variables:
   - architect
+urlField:
+  building
 sparql: >
   SELECT ?building ?architect  FROM <http://data.duraark.eu/sdas>
   WHERE {

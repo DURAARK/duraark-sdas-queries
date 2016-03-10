@@ -8,6 +8,8 @@ variables:
   - floorCount
   - postalLocality
   - architect
+urlField:
+  building
 sparql: |
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT ?building FROM  <http://data.duraark.eu/sdas>

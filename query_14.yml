@@ -2,6 +2,8 @@ label:
   Give me a list of famous people who studied or worked at the DTU.
 category:
   contextual
+urlField:
+  person
 sparql: >
   SELECT DISTINCT ?person FROM <http://data.duraark.eu/crawl/40>
   WHERE {

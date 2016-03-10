@@ -2,7 +2,8 @@ label:
   Give me a list of buildings with their numbers of floors in Copenhagen.
 category:
   buildm
-variables:
+urlField:
+  building
 sparql: >
   SELECT DISTINCT ?building ?floors FROM <http://data.duraark.eu/sdas>
   WHERE {

@@ -7,6 +7,8 @@ category:
 variables:
   - floorCount
   - windowCount
+urlField:
+  building
 sparql: >
   SELECT DISTINCT ?building, ?floors, ?windows FROM <http://data.duraark.eu/sdas>
   WHERE {

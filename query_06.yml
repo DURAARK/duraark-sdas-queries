@@ -2,6 +2,8 @@ label:
   Show me buildings of same age in Copenhagen.
 category:
   buildm
+urlField:
+  building1
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT ?building1, ?building2, ?year  FROM  <http://data.duraark.eu/sdas>

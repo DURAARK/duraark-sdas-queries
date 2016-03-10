@@ -4,6 +4,8 @@ category:
   contextual
 show:
   false
+urlField:
+  building
 sparql: >
   SELECT ?building FROM <http://data.duraark.eu/crawl/3> WHERE{
     FILTER regex(?value,"Church") .

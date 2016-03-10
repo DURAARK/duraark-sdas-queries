@@ -4,6 +4,8 @@ category:
   buildm
 show:
   false
+urlField:
+  building
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT DISTINCT ?building, ?style FROM <http://data.duraark.eu/sdas>

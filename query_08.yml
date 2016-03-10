@@ -2,6 +2,8 @@ label:
   Which of my buildings have the biggest ratio of opening (window to ground area ratio)
 category:
   buildm
+urlField:
+  building
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT ?building, xsd:double(?winArea)/xsd:double(?buildArea) AS ?openingRatio FROM <http://data.duraark.eu/sdas>

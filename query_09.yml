@@ -2,6 +2,8 @@ label:
   Show me buildings in Copenhagen with the same number of floors.
 category:
   buildm
+urlField:
+  building
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT DISTINCT ?building ?floors FROM <http://data.duraark.eu/sdas>

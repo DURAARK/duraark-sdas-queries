@@ -7,6 +7,8 @@ category:
 variables:
   - floorCount
   - postalLocality
+urlField:
+  building
 sparql: >
   SELECT ?building, ?floors FROM <http://data.duraark.eu/sdas>
   WHERE {

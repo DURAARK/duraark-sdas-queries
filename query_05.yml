@@ -2,6 +2,8 @@ label:
   Which historic buildings are located in Copenhagen?
 category:
   buildm
+urlField:
+  building
 sparql: >
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   SELECT ?building, ?year FROM  <http://data.duraark.eu/sdas>

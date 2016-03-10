@@ -4,6 +4,8 @@ category:
   buildm
 show:
   false
+urlField:
+  building
 sparql: >
   SELECT ?building FROM <http://data.duraark.eu/sdas>
     WHERE{
